@@ -29,7 +29,7 @@ Lambda parse_expr(string s, int& i);
 Lambda parse(string s);
 string lambda_type(Lambda e);
 Lambda alpha(Lambda e, string new_arg);
-//Lambda beta(Lambda e, string new_arg);
+
 
 ostream& operator<<(ostream& out, Lambda e) {
     string type = lambda_type(e);
@@ -305,16 +305,6 @@ Lambda beta(Lambda e) {
     }
 }        
 
-//l1 == parse("(\x.\y.xy) (\z.z)")               
-//l2 = parse("\y.(\z.z)y")    
-//beta(l1) == l2
-     
-                //\y.xy
-                   //^
-                //(\z.z)
-//beta(parse("(\x.(\x.xx) x) (\z.z)") == parse("(\x.xx) (\z.z)")
-
-
 int main() {
     cout << boolalpha;
     //cout << (alpha(parse("\\x. \\y.xy "), "z") == parse("\\z. \\y.zy ")) << endl;
@@ -345,8 +335,4 @@ int main() {
     return 0;
 }
 
-//(x)
-//(\x . (b))
-//((f) (g))
-//void print(LambdaExpr* expr) {
-//}
+
